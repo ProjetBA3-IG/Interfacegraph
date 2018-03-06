@@ -7,25 +7,24 @@ package javafxapplication3;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Polygon;
 
 /**
  *
  * @author Baldé
  */
-public class Ellipse extends Shapes
-{  
+public class Diamond extends Shapes{
 
-    public Ellipse(GraphicsContext gc, Canvas canvas) {
+    public Diamond(GraphicsContext gc, Canvas canvas) {
         super(gc, canvas);
     }
-
     
-   @Override
+     @Override
    public void drawShapes(){
-       double y = this.canvas.getHeight();
-        double x = this.canvas.getWidth();
-        gc.strokeOval(10, 300, x/5, y/5);
+     
+      gc.strokePolygon(new double[]{80.0, 150.0, 80.0,10}, new double[]{280.0, 220.0, 160.0, 220.0}, 4);
+       
    }
    
-    
 }

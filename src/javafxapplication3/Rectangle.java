@@ -13,27 +13,17 @@ import javafx.scene.canvas.GraphicsContext;
  *
  * @author Baldé
  */
-public class Rectangle
-{ 
-    private GraphicsContext gc;
-    private Canvas canvas;
-    private String text;
-    private Listner listner;
+public class Rectangle extends Shapes{ 
 
-    public Rectangle(Canvas c){
-        this.listner = new Listner();
-        this.canvas = c;
-        this.gc = this.canvas.getGraphicsContext2D();
-        this.drawShapes();             
+    public Rectangle(GraphicsContext gc, Canvas canvas) {
+        super(gc, canvas);
     }
-    
-    private void drawShapes() {
-        double x = this.canvas.getWidth();
-        double y = this.canvas.getHeight();
-        this.gc.strokeRect(10, 10, x /5,y / 5);
-        this.gc.fillText(text, 20,20);
-        this.gc.strokeText("helo avec rectangle", 20, 20);
+ 
+    @Override
+   public void drawShapes() {
+        double y = canvas.getHeight();
+        double x= canvas.getWidth();
         
-        System.out.println(" hi "+x /2);
+        gc.strokeRect(10, 440, x /5,y / 8);   
     }       
 }

@@ -32,13 +32,16 @@ public class JavaFXApplication3 extends Application {
         Group root = new Group();
         Canvas canvas = new Canvas(700, 550);
         GraphicsContext gc = canvas.getGraphicsContext2D();
-       // drawShapes(gc);
         root.getChildren().add(canvas);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
-        Rectangle rec = new Rectangle(canvas);
-        Ellipse ell = new Ellipse(canvas);
-      
+ //*******************************************************
+        Shapes shapes[] = new Shapes[4];
+        shapes[0] = new Rectangle(gc,canvas);
+        shapes[1] = new Ellipse(gc, canvas);
+        shapes[2] = new Diamond(gc, canvas);
+        shapes[3] = new Parallelogram(gc, canvas);
+         //gc.fillPolygon(new double[]{10.0, 100.0, 20.0, 0.0}, new double[]{10.0, 10.0, 20.0, 0.0}, 4);
     }
      
     /**
@@ -47,13 +50,6 @@ public class JavaFXApplication3 extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-/*
-    private void drawShapes(GraphicsContext gc) {
-        gc.setFill(Color.GREEN);
-        gc.setStroke(Color.BLUE);
-        gc.setLineWidth(5);
-        
-        gc.strokeRoundRect(160, 60, 30, 30, 10, 10);
-    }*/
+
     
 }

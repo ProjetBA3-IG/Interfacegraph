@@ -12,20 +12,16 @@ import javafx.scene.canvas.GraphicsContext;
  *
  * @author Baldé
  */
-public class Ellipse extends Shapes
-{  
+public class Parallelogram extends Shapes{
 
-    public Ellipse(GraphicsContext gc, Canvas canvas) {
+    public Parallelogram(GraphicsContext gc, Canvas canvas) {
         super(gc, canvas);
     }
 
-    
-   @Override
+    @Override
    public void drawShapes(){
-       double y = this.canvas.getHeight();
-        double x = this.canvas.getWidth();
-        gc.strokeOval(10, 300, x/5, y/5);
+        gc.strokePolygon(new double[]{110.0, 150.0, 50.0,10}, new double[]{120.0, 60.0, 60.0, 120.0}, 4);
    }
-   
+    
     
 }
