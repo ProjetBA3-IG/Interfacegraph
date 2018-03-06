@@ -32,7 +32,7 @@ public class Rectangle
         double y = this.canvas.getHeight();
         this.gc.strokeRect(10, 10, x /5,y / 5);
         this.gc.fillText(text, 20,20);
-        this.gc.strokeText("helo avec un seul l", 20, 20);
+        this.gc.strokeText("helo avec rectangle", 20, 20);
         
         System.out.println(" hi "+x /2);
     }       

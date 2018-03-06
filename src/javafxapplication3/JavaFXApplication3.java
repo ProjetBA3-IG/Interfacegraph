@@ -37,9 +37,8 @@ public class JavaFXApplication3 extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
         Rectangle rec = new Rectangle(canvas);
-        
-        
-        
+        Ellipse ell = new Ellipse(canvas);
+      
     }
      
     /**
