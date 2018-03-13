@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package test;
+package Version5;
 
 import java.awt.Insets;
 import java.awt.Point;
